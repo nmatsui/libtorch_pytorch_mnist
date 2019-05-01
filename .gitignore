@@ -1,4 +1,5 @@
 .python-version
 data/*
 models/*
+__pycache__/
 !.gitkeep
