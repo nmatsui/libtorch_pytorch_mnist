@@ -15,7 +15,8 @@ def parse_args():
 
 
 def load_image(image_file):
-    src = cv2.imread(image_file)
+    raw = cv2.imread(image_file)
+    src = cv2.resize(raw, (28, 28))
     gray = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)
     invert = cv2.bitwise_not(gray)
     data = invert / 255
@@ -36,7 +37,7 @@ def main(args):
     label = pred.item()
     prob = output[0][label].item()
 
-    print('label: {} (prob: {:.4f})'.format(label, prob))
+    print('label: {} (prob: {:.6f})'.format(label, prob))
 
 
 if __name__ == '__main__':
