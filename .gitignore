@@ -5,3 +5,4 @@ __pycache__/
 !.gitkeep
 libtorch/build/*
 predict_image
+preeict_camera

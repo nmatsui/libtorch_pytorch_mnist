@@ -11,3 +11,4 @@ find_package(Torch REQUIRED)
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
 add_subdirectory("pimage")
+add_subdirectory("pcamera")
