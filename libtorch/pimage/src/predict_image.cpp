@@ -27,10 +27,10 @@ int main(int argc, char* argv[]) {
     loadImage(argv[2], data);
     auto input = torch::from_blob(data.data, {1, 1, 28, 28}, at::kFloat);
 
-    auto module = torch::jit::load(argv[1]);
-    assert(module != nullptr);
+    auto model = torch::jit::load(argv[1]);
+    assert(model != nullptr);
 
-    auto output = at::softmax(module->forward({input}).toTensor(), 1);
+    auto output = at::softmax(model->forward({input}).toTensor(), 1);
     auto pred = at::argmax(output, 1, true);
     auto label = pred.item<int64_t>();
     auto prob = output[0][label].item<float_t>();

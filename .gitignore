@@ -4,4 +4,4 @@ models/*
 __pycache__/
 !.gitkeep
 libtorch/build/*
-predict
+predict_image
