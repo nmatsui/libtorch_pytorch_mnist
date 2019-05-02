@@ -10,7 +10,9 @@ dependencies:
   - cairo=1.14.12=hc4e6be7_4
   - certifi=2019.3.9=py37_0
   - cffi=1.12.3=py37hb5b8e2f_0
+  - entrypoints=0.3=py37_0
   - ffmpeg=4.0=h01ea3c9_0
+  - flake8=3.7.7=py37_0
   - fontconfig=2.13.0=h5d5b041_1
   - freetype=2.9.1=hb4e5f40_0
   - gettext=0.19.8.1=h15daf44_3
@@ -44,6 +46,7 @@ dependencies:
   - libvpx=1.7.0=h378b8a2_0
   - libwebp=1.0.1=hd73b212_0
   - libxml2=2.9.9=hab757c2_0
+  - mccabe=0.6.1=py37_1
   - mkl=2019.3=199
   - mkl_fft=1.0.12=py37h01d97ff_1
   - mkl_random=1.0.4=py37h051e8ed_0
@@ -62,7 +65,9 @@ dependencies:
   - pip=19.1=py37_0
   - pixman=0.38.0=h1de35cc_0
   - py-opencv=3.4.2=py37h7c891bd_1
+  - pycodestyle=2.5.0=py37_0
   - pycparser=2.19=py37_0
+  - pyflakes=2.1.1=py37_0
   - python=3.7.3=h359304d_0
   - pytorch=1.1.0=py3.7_0
   - readline=7.0=h1de35cc_5

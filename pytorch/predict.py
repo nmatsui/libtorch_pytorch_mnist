@@ -4,7 +4,6 @@ import argparse
 import cv2
 import torch
 import numpy as np
-from data import get_train_data
 from model import MnistCNNModel
 
 
