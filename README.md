@@ -1,25 +1,39 @@
-# pytorch mnist
+# MNIST CNN using libtorch & pytorch
 You can train your MNIST CNN model by using pytorch (python3), and you can predict a handwritten digit by using libtorch (C++11).
 
 ## Requirements
-* Ubuntu 18.04.2 LTS
-* miniconda3-4.3.30
-* python 3.7
-* opencv 4.1.0
-* pytorch 1.1.0
+
+||version|
+|:--|:--|
+|OS|Ubuntu 18.04.2 LTS|
+|gcc|7.4.0|
+|miniconda3|4.6.14|
+|python|3.7.1|
+|opencv|4.1.0|
+|pytorch & libtorch|1.1.0|
 
 ## prepare
+### clone repository
+1. clone repository
+
+    ```
+    $ cd ${HOME}
+    $ git clone https://github.com/nmatsui/libtorch_pytorch_mnist.git
+    ```
+
 ### install required libraries
 1. install libraries
 
     ```
     $ sudo apt install -y build-essential cmake unzip pkg-config wget
-    $ sudo apt install -y qt5-default libvtk6-dev zlib1g-dev libwebp-dev libjasper-dev \
-                          libopenexr-dev libgdal-dev libjpeg-dev libpng-dev libtiff-dev libtiff5-dev \
-                          libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxine2-dev \
-                          libxvidcore-dev libx264-dev libdc1394-22-dev libtheora-dev libvorbis-dev \
-                          libgtk-3-dev libatlas-base-dev libopencore-amrnb-dev  libopencore-amrwb-dev \
-                          libtbb-dev libeigen3-dev gfortran yasm
+    $ sudo apt install -y qt5-default libvtk6-dev zlib1g-dev libwebp-dev \
+                          libopenexr-dev libgdal-dev libjpeg-dev libpng-dev \
+                          libtiff-dev libtiff5-dev libv4l-dev libavcodec-dev \
+                          libavformat-dev libswscale-dev libxine2-dev \
+                          libxvidcore-dev libx264-dev libdc1394-22-dev \
+                          libtheora-dev libvorbis-dev libgtk-3-dev libtbb-dev \
+                          libatlas-base-dev libopencore-amrnb-dev  \
+                          libopencore-amrwb-dev libeigen3-dev gfortran yasm
     ```
 1. install opencv
 
@@ -55,7 +69,7 @@ You can train your MNIST CNN model by using pytorch (python3), and you can predi
 1. cd `libtorch` directory
 
     ```
-    $ cd ${HOME}/pytorch_mnist/libtorch
+    $ cd ${HOME}/libtorch_pytorch_mnist/libtorch
     ```
 1. prepare build directory
 
@@ -75,12 +89,12 @@ You can train your MNIST CNN model by using pytorch (python3), and you can predi
 1. go to the python source directory
 
     ```
-    $ cd ${HOME}/pytorch_mnist/pytorch
+    $ cd ${HOME}/libtorch_pytorch_mnist/pytorch
     ```
 1. create virtualenv and install required package by using conda
 
     ```
-    $ conda env create --file conda.yaml
+    $ conda env create --file conda-linux.yaml
     $ conda activate pytorch_mnist
     ```
 1. train data
@@ -103,32 +117,11 @@ You can train your MNIST CNN model by using pytorch (python3), and you can predi
     * 1st argument: trained model weights file
     * 2nd argument: the model weights file to be converted for c++
 
-## How to predict a handwritten digit from a image file (c++)
-1. go to the c++ source directory
-
-    ```
-    $ cd ${HOME}/pytorch_mnist/libtorch
-    ```
-1. predict a handwitten digit like below:
-
-    ```
-    $ ./predict_image ../models/mnist_cpp.pt ../digit_images/5.png
-    ```
-    * 1st argument: converted model weights file for c++
-    * 2nd argument: a handwritten digit image file
-
-## How to predict a handwritten digit continuously from USB camera frame (c++)
-1. go to the c++ source directory
-
-    ```
-    $ cd ${HOME}/pytorch_mnist/libtorch
-    ```
-
 ## How to predict a handwritten digit from a image file (python)
 1. go to the python source directory
 
     ```
-    $ cd ${HOME}/pytorch_mnist/pytorch
+    $ cd ${HOME}/libtorch_pytorch_mnist/pytorch
     ```
 1. predict a handwitten digit like below:
 
@@ -142,7 +135,7 @@ You can train your MNIST CNN model by using pytorch (python3), and you can predi
 1. go to the c++ source directory
 
     ```
-    $ cd ${HOME}/pytorch_mnist/libtorch
+    $ cd ${HOME}/libtorch_pytorch_mnist/libtorch
     ```
 1. predict a handwitten digit like below:
 
@@ -156,7 +149,7 @@ You can train your MNIST CNN model by using pytorch (python3), and you can predi
 1. go to the c++ source directory
 
     ```
-    $ cd ${HOME}/pytorch_mnist/libtorch
+    $ cd ${HOME}/libtorch_pytorch_mnist/libtorch
     ```
 1. start camera preview like below:
 
