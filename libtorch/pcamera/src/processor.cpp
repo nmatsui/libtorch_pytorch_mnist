@@ -66,9 +66,12 @@ void Processor::drawRect(cv::Mat& frame, bool hit) {
 }
 
 void Processor::drawLabel(cv::Mat& frame, int label, float prob) {
-    std::stringstream ostr;
+    std::stringstream str_label, str_prob;
     auto color = cv::Scalar(200, 0, 0);
-    auto pos = cv::Point(this->st_region.x, this->st_region.y - 20);
-    ostr << "predicted: '" << label << "' (probability : " << prob << ")" << std::endl;
-    cv::putText(frame, ostr.str(), pos, cv::FONT_HERSHEY_SIMPLEX, 1, color, 2, 8);
+    auto pos_label = cv::Point(this->st_region.x - 20, this->st_region.y - 60);
+    auto pos_prob = cv::Point(this->st_region.x - 20, this->st_region.y - 20);
+    str_label << "predicted: '" << label << "'";
+    str_prob << "(probability : " << prob << ")";
+    cv::putText(frame, str_label.str(), pos_label, cv::FONT_HERSHEY_SIMPLEX, 1, color, 2, 8);
+    cv::putText(frame, str_prob.str(), pos_prob, cv::FONT_HERSHEY_SIMPLEX, 1, color, 2, 8);
 }
