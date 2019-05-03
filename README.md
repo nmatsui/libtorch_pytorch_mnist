@@ -155,10 +155,17 @@ You can train your MNIST CNN model by using pytorch (python3), and you can predi
 
     ```
     $ ./predict_camera ../models/mnist_cpp.pt 0 0.9
-
     ```
     * 1st argument: converted model weights file for c++
     * 2nd argument: camera device id
     * 3rd argument: predict the handwritten digit when the calcurated probability is greater than this float
 1. predict the digit when a character is displayed in the green box
 
+[![realtime recognition of a handwritten digit by using libtorch](http://img.youtube.com/vi/cg1IkkFI8Rc/0.jpg)](https://www.youtube.com/watch?v=cg1IkkFI8Rc)
+
+## License
+
+[Apache License 2.0](/LICENSE)
+
+## Copyright
+Copyright (c) 2019 Nobuyuki Matsui <nobuyuki.matsui@gmail.com>
