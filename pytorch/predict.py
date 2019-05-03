@@ -9,8 +9,8 @@ from model import MnistCNNModel
 
 def parse_args():
     parser = argparse.ArgumentParser(description='predict a handwritten digit')
-    parser.add_argument('model_file')
-    parser.add_argument('image_file')
+    parser.add_argument('model_file', help='trained model file')
+    parser.add_argument('image_file', help='test image file')
     return parser.parse_args()
 
 

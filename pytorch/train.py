@@ -11,10 +11,8 @@ from func import train, test
 
 def parse_args():
     parser = argparse.ArgumentParser(description='train mnist by using CNN')
-    parser.add_argument('model_file')
-    parser.add_argument('--data_root_path', type=str,
-                        default='./data', metavar='root_path_of_data',
-                        help='root path to save MNIST data (default: ./data)')
+    parser.add_argument('model_file', help='model file path')
+    parser.add_argument('data_root_path', help='root path to dave MNIST data')
     parser.add_argument('--batch-size', type=int,
                         default=64, metavar='N',
                         help='input batch size for training (default: 64)')
