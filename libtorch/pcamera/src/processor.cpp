@@ -70,5 +70,5 @@ void Processor::drawLabel(cv::Mat& frame, int label, float prob) {
     auto color = cv::Scalar(200, 0, 0);
     auto pos = cv::Point(this->st_region.x, this->st_region.y - 20);
     ostr << "predicted: '" << label << "' (probability : " << prob << ")" << std::endl;
-    cv::putText(frame, ostr.str(), pos, cv::FONT_HERSHEY_SIMPLEX, 1, color, 2, CV_AA);
+    cv::putText(frame, ostr.str(), pos, cv::FONT_HERSHEY_SIMPLEX, 1, color, 2, 8);
 }
