@@ -21,4 +21,4 @@ class MnistCNNModel(nn.Module):
         x = F.relu(self.fc1(x))
         x = self.dropout2(x)
         x = self.fc2(x)
-        return x
+        return F.log_softmax(x, dim=1)
